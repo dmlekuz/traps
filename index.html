@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Prehistoric Animal Trap — Karst</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+<title>Prehistoric Animal Trap — Karst / Prazgodovinska past za živali / Trappola preistorica per animali</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;family=Source+Serif+4:ital,wght@0,300;0,400;1,300&amp;display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -34,6 +35,330 @@
     max-width: var(--max);
     margin: 0 auto;
     padding: 0;
+    background: var(--white);
+  }
+
+  /* ── LANGUAGE SWITCHER ── */
+  .lang-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--stone-light);
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+  }
+  .lang-btn {
+    font-family: var(--body);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    background: none;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: color 0.2s, background 0.2s;
+  }
+  .lang-btn.active {
+    color: var(--accent);
+    background: var(--stone-pale);
+  }
+  .lang-btn:hover { color: var(--ink-mid); }
+  .lang-sep { color: var(--stone-light); font-size: 0.8rem; }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 2.5rem 1.25rem 2rem;
+    border-bottom: 1px solid var(--stone-light);
+  }
+  .hero-kicker {
+    font-family: var(--body);
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .hero-lead {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink-mid);
+    line-height: 1.65;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    padding: 1.75rem 1.25rem;
+    border-bottom: 1px solid var(--stone-light);
+  }
+  .section-label {
+    font-family: var(--body);
+    font-size: 0.62rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 0.5rem;
+  }
+  .section h2 {
+    font-family: var(--serif);
+    font-size: 1.65rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 0.9rem;
+  }
+  .section p {
+    font-size: 0.95rem;
+    color: var(--ink-mid);
+    margin-bottom: 0.9rem;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* ── FIGURES ── */
+  figure {
+    margin: 1.25rem 0;
+    background: var(--stone-pale);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  figure img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  figcaption {
+    padding: 0.75rem 1rem;
+    font-family: var(--body);
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--stone-light);
+  }
+
+  /* ── NOTE / DATING BOX ── */
+  .note {
+    border-left: 2px solid var(--accent-light);
+    padding: 0.6rem 0.9rem;
+    margin: 1rem 0;
+    background: var(--stone-pale);
+    border-radius: 0 3px 3px 0;
+  }
+  .note p {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--ink-mid);
+    margin: 0;
+  }
+
+  /* ── LINK ── */
+  .pnas-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: var(--body);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-light);
+    padding-bottom: 1px;
+  }
+  .pnas-link:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* ── TEAM ── */
+  .team {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+  .team .section-label { margin-bottom: 0.75rem; }
+  .team p {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--ink-faint);
+  }
+  .team a { color: var(--accent); text-decoration: none; }
+
+  /* ── LANGUAGE VISIBILITY ── */
+  .lang-en, .lang-sl, .lang-it { display: none; }
+  .lang-en.visible, .lang-sl.visible, .lang-it.visible { display: block; }
+  span.lang-en, span.lang-sl, span.lang-it { display: none; }
+  span.lang-en.visible, span.lang-sl.visible, span.lang-it.visible { display: inline; }
+</style>
+</head>
+<body>
+<!-- LANGUAGE BAR -->
+<nav aria-label="Language selector" class="lang-bar">
+<button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+<span class="lang-sep">·</span>
+<button class="lang-btn" id="btn-sl" onclick="setLang('sl')">SL</button>
+<span class="lang-sep">·</span>
+<button class="lang-btn" id="btn-it" onclick="setLang('it')">IT</button>
+</nav>
+<!-- HERO -->
+<header class="hero">
+<p class="hero-kicker">Kras · Carso · Karst</p>
+<h1>
+<span class="lang-en visible">You are standing in a prehistoric animal trap</span>
+<span class="lang-sl">Ste v prazgodovinski pasti za živali</span>
+<span class="lang-it">Vi trovate all'interno di una trappola preistorica per animali</span>
+</h1>
+<p class="hero-lead">
+<span class="lang-en visible">Thousands of years ago, this sinkhole marked the end of a kilometre-long funnel built to capture herds of deer.</span>
+<span class="lang-sl">Pred tisočletji je ta vrtača označevala konec kilometer dolgega lijaka, zgrajenega za lovljenje čred jelenov.</span>
+<span class="lang-it">Migliaia di anni fa, questa dolina segnava la fine di un imbuto lungo un chilometro, costruito per catturare branchi di cervi.</span>
+</p>
+</header>
+<!-- SECTION 1: THE PIT -->
+<section class="section">
+<p class="section-label">
+<span class="lang-en visible">What you see</span>
+<span class="lang-sl">Kar vidite</span>
+<span class="lang-it">Cosa vedete</span>
+</p>
+<h2>
+<span class="lang-en visible">The main pit</span>
+<span class="lang-sl">Glavna past</span>
+<span class="lang-it">La trappola principale</span>
+</h2>
+<figure>
+<img alt="3D reconstruction of deer herd at the trap pit" src="Fig3.jpeg"/>
+<figcaption>
+<span class="lang-en visible">This is the place where you are standing. A herd of red deer, driven down the funnel, reaches the end of the trap: a stone-built enclosure beneath a limestone cliff.</span>
+<span class="lang-sl">Stojite na mestu, kjer se je lov končal. Čreda jelenov, ki so jo gnali po lijaku, se je ujela v kamnito ogrado pod apnenčasto skalno steno.</span>
+<span class="lang-it">Vi trovate nel luogo in cui la caccia giungeva al termine. Un branco di cervi, spinto lungo l'imbuto, finiva in un recinto di pietra ai piedi di una parete calcarea.</span>
+</figcaption>
+</figure>
+<p>
+<span class="lang-en visible">The stone enclosure below you is where animals were trapped and killed. From the ridge, two long stone walls converge toward this point, using the natural slope to guide a whole herd, possibly red deer on their autumn migration, into a space from which there was no escape.</span>
+<span class="lang-sl">Kamnita struktura pod vami je prostor, kjer so bile živali ujete in pobite. Z grebena se proti tej točki stekata dva dolga kamnita zidova, ki usmerjata gibanje celotne črede, verjetno jelenov na jesenskih selitvah, v prostor, iz katerega ni bilo izhoda.</span>
+<span class="lang-it">La struttura in pietra sotto di voi è il luogo dove gli animali venivano catturati e abbattuti. Dal crinale convergono verso questo punto due lunghi muri in pietra, che guidavano il movimento dell'intero branco, probabilmente cervi durante le migrazioni autunnali, verso uno spazio dal quale non vi era possibilità di fuga.</span>
+</p>
+</section>
+<!-- SECTION 2: THE WALLS -->
+<section class="section">
+<h2>
+<span class="lang-en visible">Four kilometres of walls</span>
+<span class="lang-sl">Štirje kilometri zidov</span>
+<span class="lang-it">Quattro chilometri di muri</span>
+</h2>
+<figure>
+<img alt="LiDAR image showing guiding walls and pit" src="Fig1an.jpeg"/>
+<figcaption>
+<span class="lang-en visible">LiDAR image of the trap. Airborne laser scanning, or LiDAR, removes vegetation to reveal archaeological features hidden beneath the forest canopy. Two long stone walls cross the slope and converge into a funnel that ends at the trap enclosure where you are standing now. The dark circular depressions are dolines, natural limestone sinkholes that formed part of the trapping system.</span>
+<span class="lang-sl">Past na lidarskem posnetku. Lasersko skeniranje iz zraka, LiDAR, odstrani vegetacijo in razkrije arheološke sledove, skrite pod gozdnim pokrovom. Dva dolga kamnita zidova prečkata pobočje in se združita v lijak, ki se zaključi pri ogradi, kjer stojite zdaj. Temne okrogle vdolbine so vrtače, naravne kraške kotanje; nekatere so bile vključene v past.</span>
+<span class="lang-it">La trappola in un'immagine LiDAR. La scansione laser aerea, nota come LiDAR, rimuove virtualmente la vegetazione e rivela le tracce archeologiche nascoste sotto la copertura forestale. Due lunghi muri in pietra attraversano il pendio e convergono in un imbuto che termina presso il recinto dove vi trovate ora. Le depressioni circolari scure sono doline, cavità naturali del paesaggio carsico; alcune di esse facevano parte del sistema di cattura.</span>
+</figcaption>
+</figure>
+<p>
+<span class="lang-en visible">The guiding walls begin far apart across the slope and gradually converge towards this doline. Built from dry-stacked limestone blocks, roughly a metre wide and a metre high, they follow every fold of the landscape, directing animal movement towards the trap. Constructing and maintaining a system of this scale required the effort of an entire community.</span>
+<span class="lang-sl">Zidova se začneta na grebenu, daleč narazen, in se postopoma približujeta tej vrtači. Zgrajena sta iz na suho zloženih apnenčastih kamnov, približno meter široka in meter visoka. Sledita obliki pokrajine ter usmerjata gibanje živali proti pasti. Gradnja in vzdrževanje sistema takšnega obsega sta zahtevala skupen napor celotne skupnosti.</span>
+<span class="lang-it">I due muri iniziano sul crinale, molto distanti tra loro, e convergono gradualmente verso questa dolina. Costruiti con blocchi calcarei sovrapposti a secco, larghi circa un metro e alti un metro, seguono ogni piega del terreno e indirizzano il movimento degli animali verso la trappola. La costruzione e la manutenzione di un sistema di tale portata richiedevano lo sforzo collettivo di un'intera comunità.</span>
+</p>
+</section>
+<!-- SECTION 3: GLOBAL TRADITION -->
+<section class="section">
+<p class="section-label">
+<span class="lang-en visible">Wider context</span>
+<span class="lang-sl">Širši kontekst</span>
+<span class="lang-it">Contesto più ampio</span>
+</p>
+<h2>
+<span class="lang-en visible">A global tradition</span>
+<span class="lang-sl">Svetovna tradicija</span>
+<span class="lang-it">Una tradizione globale</span>
+</h2>
+<p>
+<span class="lang-en visible">These are the first prehistoric hunting structures of this kind discovered in Europe. Similar systems, known as desert kites, were built across the Near East and North Africa at least 9,000 years ago to capture gazelles. Comparable V-shaped hunting drives are also known from the Americas.</span>
+<span class="lang-sl">To so prve prazgodovinske lovske strukture te vrste, odkrite v Evropi. Podobni sistemi, znani kot puščavski zmaji (desert kites), so bili na Bližnjem vzhodu in v Severni Afriki zgrajeni že pred najmanj 9.000 leti za lovljenje gazel. Primerljive lovske strukture v obliki črke V poznamo tudi v Amerikah.</span>
+<span class="lang-it">Queste sono le prime strutture di caccia preistoriche di questo tipo scoperte in Europa. Sistemi simili, noti come desert kites ("aquiloni del deserto"), vennero costruiti nel Vicino Oriente e nel Nord Africa almeno 9.000 anni fa per catturare gazzelle. Strutture di caccia comparabili, a forma di V, sono note anche nelle Americhe.</span>
+</p>
+<figure>
+<img alt="Aerial photograph of a desert kite in the Arabian desert" src="Fig2.jpg"/>
+<figcaption>
+<span class="lang-en visible">A desert kite in the Arabian Desert, seen from above. Stone walls guide a herd of gazelles towards a killing enclosure at the end of the funnel. Although built in a very different landscape, the Karst traps follow the same principle.</span>
+<span class="lang-sl">Puščavski zmaj v Arabski puščavi, viden iz zraka. Kamniti zidovi usmerjajo čredo gazel proti ogradi za ulov na koncu lijaka. Čeprav so kraške pasti nastale v povsem drugačni pokrajini, temeljijo na istem načelu.</span>
+<span class="lang-it">Un desert kite nel deserto arabico, visto dall'alto. Muri in pietra guidano un branco di gazzelle verso un recinto di cattura posto alla fine dell'imbuto. Sebbene le trappole del Carso siano state costruite in un paesaggio molto diverso, si basano sullo stesso principio.</span>
+</figcaption>
+</figure>
+<p>
+<span class="lang-en visible">The presence of four traps on the Karst shows that this was not an isolated undertaking. Walls had to be built and maintained, animal movements understood, and people brought together to hunt cooperatively. These traps were not simply hunting devices. They were part of a way of life.</span>
+<span class="lang-sl">Prisotnost štirih pasti na Krasu kaže, da ni šlo za osamljen podvig. Zidove je bilo treba graditi in vzdrževati, razumeti gibanje živali ter povezati ljudi v skupen lov. Te pasti niso bile zgolj lovske naprave, odražale so znanje o pokrajini, gibanju živali in sodelovanju ljudi.</span>
+<span class="lang-it">La presenza di quattro trappole sul Carso dimostra che non si trattava di un'impresa isolata. I muri dovevano essere costruiti e mantenuti, i movimenti degli animali compresi e le persone riunite per una caccia cooperativa. Queste trappole non erano semplicemente dispositivi per la cattura degli animali: riflettono una profonda conoscenza del paesaggio, del comportamento animale e della collaborazione tra le persone.</span>
+</p>
+</section>
+<!-- SECTION 4: RESEARCH -->
+<section class="section">
+<p class="section-label">
+<span class="lang-en visible">The research</span>
+<span class="lang-sl">Raziskava</span>
+<span class="lang-it">La ricerca</span>
+</p>
+<h2>
+<span class="lang-en visible">How it was discovered</span>
+<span class="lang-sl">Odkritje</span>
+<span class="lang-it">La scoperta</span>
+</h2>
+<p>
+<span class="lang-en visible">For centuries, the walls remained hidden beneath vegetation and were mistaken for ordinary field boundaries. Airborne laser scanning (LiDAR) revealed the full extent of the trapping system. The discovery was published in 2025 in Proceedings of the National Academy of Sciences.</span>
+<span class="lang-sl">Zidovi so stoletja ostajali skriti pod rastjem. Lasersko skeniranje iz zraka (LiDAR) je razkrilo celoten obseg lovskega sistema. Odkritje je bilo leta 2025 objavljeno v reviji Proceedings of the National Academy of Sciences.</span>
+<span class="lang-it">Per secoli i muri sono rimasti nascosti dalla vegetazione. La scansione laser aerea (LiDAR) ha rivelato l'intera estensione del sistema di cattura. La scoperta è stata pubblicata nel 2025 sulla rivista Proceedings of the National Academy of Sciences.</span>
+</p>
+<div class="note">
+<p>
+<span class="lang-en visible">The trap fell out of use around 3,500 years ago, but it may have been built much earlier. Ongoing research aims to determine its age more precisely.</span>
+<span class="lang-sl">Past je bila opuščena pred približno 3.500 leti, vendar je bila morda zgrajena veliko prej. Raziskave, s katerimi skušamo natančneje določiti njeno starost, še potekajo.</span>
+<span class="lang-it">La trappola venne abbandonata circa 3.500 anni fa, ma potrebbe essere stata costruita molto prima. Le ricerche per determinarne con maggiore precisione l'età sono tuttora in corso.</span>
+</p>
+</div>
+<a class="pnas-link" href="https://www.pnas.org/doi/10.1073/pnas.2511908122" rel="noopener" target="_blank">
+<span class="lang-en visible">Read the full study (PNAS)</span>
+<span class="lang-sl">Preberite celotno študijo (PNAS)</span>
+<span class="lang-it">Leggete lo studio completo (PNAS)</span>
+</a>
+</section>
+<!-- TEAM -->
+<footer class="team">
+<p class="section-label">
+<span class="lang-en visible">Research team</span>
+<span class="lang-sl">Raziskovalna ekipa</span>
+<span class="lang-it">Gruppo di ricerca</span>
+</p>
+<p>
+    Dr. Dimitrij Mlekuž Vrhovnik, University of Ljubljana
+    Dr. Tomaž Fabec, Institute for the Protection of Cultural Heritage of Slovenia
+  </p>
+</footer>
+<script>
+  function setLang(lang) {
+    ['en','sl','it'].forEach(function(l) {
+      var show = l === lang;
+      document.querySelectorAll('.lang-' + l).forEach(function(el) {
+        el.classList.toggle('visible', show);
+      });
+      document.getElementById('btn-' + l).classList.toggle('active', show);
+    });
+    document.documentElement.lang = lang;
+  }
+</script>
+</body>
+</html>
     background: var(--white);
   }
 
